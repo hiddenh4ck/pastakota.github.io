@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--========== icon ==========-->
+    <link rel="icon" href="assets/img/icon.jpeg" type="image/x-icon" />
+    <!-- Alternatif dengan format lain -->
+    <!-- <link rel="icon" href="assets/images/favicon.png" type="image/png"> -->
+
+    <!--========== BOX ICONS ==========-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Pastakota</title>
+  </head>
+
+  <body>
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top">
+      <i class="bx bx-chevron-up scrolltop__icon"></i>
+    </a>
+
+    <!--========== HEADER ==========-->
+    <header class="l-header" id="header">
+      <nav class="nav bd-container">
+        <a href="#" class="nav__logo">Pastakota </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">Tentang</a>
+            </li>
+            <li class="nav__item">
+              <a href="#services" class="nav__link">Layanan</a>
+            </li>
+            <li class="nav__item">
+              <a href="#menu" class="nav__link">Menu</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Informasi</a>
+            </li>
+
+            <!-- <li><i class="bx bx-moon change-theme" id="theme-button"></i></li> -->
+          </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
+      </nav>
+    </header>
+
+    <main class="l-main">
+      <!--========== HOME ==========-->
+      <section class="home" id="home">
+        <div class="home__container bd-container bd-grid">
+          <div class="home__data">
+            <p class="welcome-text">Selamat Datang Di</p>
+            <h1 class="home__title">PASTAKOTA</h1>
+            <h2 class="home__subtitle">
+              #PASTASELALU <br />
+              hanya ada di sini.
+            </h2>
+            <a href="#menu" class="button">Lihat Menu</a>
+          </div>
+
+          <img src="assets/img/home1.png" alt="" class="home__img" />
+        </div>
+      </section>
+
+      <!--========== ABOUT ==========-->
+      <section class="about section bd-container" id="about">
+        <div class="about__container bd-grid">
+          <div class="about__data">
+            <span class="section-subtitle about__initial">Tentang Kami</span>
+            <h2 class="section-title about__initial">
+              We Give The Best <br />
+              PASTAKOTA
+            </h2>
+            <p class="about__description">
+              PASTAKOTA adalah pelopor hidangan pasta berkonsep Streetfood dengan menggunakan bahan-bahan pilihan terbaik, higenis, dan halal. Kami menjamin setiap produk yang kami sajikan dapat memberikan citarasa terbaik. Kami selalu melakukan quality control setiap saat untuk menjamin kualitas hidangan terbaik serta menciptakan pelayanan yang ramah dan cepat untuk setiap konsumen.
+            </p>
+            <center><a href="#contact" class="button">Kontak Kami</a></center>
+          </div>
+
+          <img src="assets/img/about1.jpg" alt="" class="about__img" />
+        </div>
+      </section>
+
+      <!--========== SERVICES ==========-->
+      <section class="services section bd-container" id="services">
+        <span class="section-subtitle">Layanan</span>
+        <h2 class="section-title">Pelayanan Terbaik kami</h2>
+
+        <div class="services__container bd-grid">
+          <div class="services__content">
+            <img src="assets/img/hygiene.png" class="services__img">
+            <h3 class="services__title">Hygiene Food</h3>
+            <p class="services__description">
+              Kami menggunakan bahan-bahan dengan kualitas tinggi, serta bahan-bahan terbaik dan higienis.
+            </p>
+          </div>
+
+          <div class="services__content">
+            <img src="assets/img/friends.png" class="services__img">
+              <defs>
+                <clipPath id="clip0">
+                  <rect width="64" height="64" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <h3 class="services__title">Friendly Service</h3>
+            <p class="services__description">
+              Kami selalu memberikan pelayanan ramah dan yang terbaik kepada pembeli. 
+            </p>
+          </div>
+
+          <div class="services__content">
+            <img src="assets/img/order-food.png" class="services__img">
+              <defs>
+                <clipPath id="clip0">
+                  <rect width="64" height="64" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <h3 class="services__title">Online Order</h3>
+            <p class="services__description">
+             Kami memberikan pelayanan pemesanan melalui Platform GO-FOOD dan GRABFOOD.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--========== MENU ==========-->
+      <section class="menu section bd-container" id="menu">
+        <h2 class="section-title">Menu Di Pastakota</h2>
+      
+        <!-- Kategori Tab -->
+        <div class="menu__categories">
+          <button class="menu__category active" onclick="filterMenu('all')">Semua</button>
+          <button class="menu__category" onclick="filterMenu('BologneseSauce')">Bolognese Sauce</button>
+          <button class="menu__category" onclick="filterMenu('MushroomSauce')">Mushroom Sauce</button>
+          <button class="menu__category" onclick="filterMenu('Spicy')">Spicy</button>
+        </div>
+      
+        <!-- Menu Container -->
+        <div class="menu__container bd-grid">
+          <!-- Bolognese Sauce Items -->
+          <div class="menu__content BologneseSauce">
+            <img src="assets/img/PENNE B.png" alt="" class="menu__img" />
+            <h3 class="menu__name">Penne Bolognese</h3>
+            <span class="menu__detail">Penne - Bolognese Sauce - Keju - Oregano</span>
+            <span class="menu__preci">Rp. 13.000</span>
+            <a href="#" class="button menu__button"><i class="bx bx-cart-alt"></i></a>
+          </div>
+          <div class="menu__content BologneseSauce">
+            <img src="assets/img/FETTUCINI B.png" alt="" class="menu__img" />
+            <h3 class="menu__name">Fettuccine Bolognese</h3>
+            <span class="menu__detail">Fettuccine - Bolognese Sauce - Keju - Oregano</span>
+            <span class="menu__preci">Rp. 13.000</span>
+            <a href="#" class="button menu__button"><i class="bx bx-cart-alt"></i></a>
+          </div>
+          <div class="menu__content BologneseSauce">
+            <img src="assets/img/SPAGHETTI B.png" alt="" class="menu__img" />
+            <h3 class="menu__name">Spaghetti Bolognese</h3>
+            <span class="menu__detail">Spaghetti - Bolognese Sauce - Keju - Oregano</span>
+            <span class="menu__preci">Rp. 13.000</span>
+            <a href="#" class="button menu__button"><i class="bx bx-cart-alt"></i></a>
+          </div>
+          <div class="menu__content BologneseSauce">
+            <img src="assets/img/MACARONI B.png" alt="" class="menu__img" />
+            <h3 class="menu__name">Macaroni Bolognese</h3>
+            <span class="menu__detail">Macaroni - Bolognese Sauce - Keju - Oregano</span>
+            <span class="menu__preci">Rp. 13.000</span>
+            <a href="#" class="button menu__button"><i class="bx bx-cart-alt"></i></a>
+          </div>
+      
+          <!-- Mushroom Sauce Items -->
+          <div class="menu__content MushroomSauce">
+            <img src="assets/img/PENNE M.png" alt="" class="menu__img" />
+            <h3 class="menu__name">Penne Mushroom</h3>
+            <span class="menu__detail">Penne - Mushroom Sauce - Keju - Oregano</span>
+            <span class="menu__preci">Rp. 13.000</span>
+            <a href="#" class="button menu__button"><i class="bx bx-cart-alt"></i></a>
+          </div>
+          <div class="menu__content MushroomSauce">
+            <img src="assets/img/FETTUCINI M.png" alt="" class="menu__img" />
+            <h3 class="menu__name">Fettuccine Mushroom</h3>
+            <span class="menu__detail">Fettuccine - Mushroom Sauce - Keju - Oregano</span>
+            <span class="menu__preci">Rp. 13.000</span>
+            <a href="#" class="button menu__button"><i class="bx bx-cart-alt"></i></a>
+          </div>
+          <div class="menu__content MushroomSauce">
+            <img src="assets/img/SPAGHETTI M.png" alt="" class="menu__img" />
+            <h3 class="menu__name">Spaghetti Mushroom</h3>
+            <span class="menu__detail">Spaghetti - Mushroom Sauce - Keju - Oregano</span>
+            <span class="menu__preci">Rp. 13.000</span>
+            <a href="#" class="button menu__button"><i class="bx bx-cart-alt"></i></a>
+          </div>
+          <div class="menu__content MushroomSauce">
+            <img src="assets/img/MACARONI M.png" alt="" class="menu__img" />
+            <h3 class="menu__name">Macaroni Mushroom</h3>
+            <span class="menu__detail">Macaroni - Mushroom Sauce - Keju - Oregano</span>
+            <span class="menu__preci">Rp. 13.000</span>
+            <a href="#" class="button menu__button"><i class="bx bx-cart-alt"></i></a>
+          </div>
+          <!-- Spicy Sauce Items -->
+          <div class="menu__content Spicy">
+            <img src="assets/img/SPAGHETTI S.png" alt="" class="menu__img" />
+            <h3 class="menu__name">Spaghetti Spicy Oil</h3>
+            <span class="menu__detail">Spaghetti - Spicy Oil - Oregano</span>
+            <span class="menu__preci">Rp. 10.000</span>
+            <a href="#" class="button menu__button"><i class="bx bx-cart-alt"></i></a>
+          </div>
+
+          <!-- coming soon -->
+          <div class="menu__content SpicyComming">
+            <div class="overlay">
+              <span class="coming-soon">Coming Soon</span>
+            </div>
+            <img src="assets/img/MACARONI S.png" alt="" class="menu__img" />
+            <h3 class="menu__name">Macaroni Spicy Oil</h3>
+            <span class="menu__detail">Macaroni - Spicy Oil - Oregano</span>
+            <span class="menu__preci">Rp. 10.000</span>
+            <a href="#" class="button menu__button"><i class="bx bx-cart-alt"></i></a>
+          </div>
+          <div class="menu__content SpicyComming">
+            <div class="overlay">
+              <span class="coming-soon">Coming Soon</span>
+            </div>
+            <img src="assets/img/MACARONI S.png" alt="" class="menu__img" />
+            <h3 class="menu__name">Macaroni Spicy Oil</h3>
+            <span class="menu__detail">Macaroni - Spicy Oil - Oregano</span>
+            <span class="menu__preci">Rp. 10.000</span>
+            <a href="#" class="button menu__button"><i class="bx bx-cart-alt"></i></a>
+          </div>
+          <div class="menu__content SpicyComming">
+            <div class="overlay">
+              <span class="coming-soon">Coming Soon</span>
+            </div>
+            <img src="assets/img/MACARONI S.png" alt="" class="menu__img" />
+            <h3 class="menu__name">Macaroni Spicy Oil</h3>
+            <span class="menu__detail">Macaroni - Spicy Oil - Oregano</span>
+            <span class="menu__preci">Rp. 10.000</span>
+            <a href="#" class="button menu__button"><i class="bx bx-cart-alt"></i></a>
+          </div>
+      </section>
+
+      <!--========== CONTACT US ==========-->
+      <section class="contact section bd-container" id="contact">
+        <div class="contact__container bd-grid">
+          <div class="contact__data">
+            <span class="section-subtitle contact__initial">Hubungi Kami</span>
+            <h2 class="section-title contact__initial">Kontak</h2>
+            <p class="contact__description">
+              Jika ada kritik dan saran, hubungi kami dan kami akan segera
+              melayani Anda, dengan layanan obrolan 24/7 kami.
+            </p>
+          </div>
+
+          <div class="contact__button">
+            <a href="https://wa.me/6285147586462" class="button">Hubungi Kami Sekarang</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+   <!--========== FOOTER ==========-->
+<footer class="footer section bd-container">
+  <div class="footer__container bd-grid">
+    <div class="footer__content">
+      <a href="#" class="footer__logo">PASTAKOTA</a>
+      <!-- <div class="footer__content"> -->
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.5339573396104!2d108.55596377378735!3d-6.704490565546203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ee30044d367c7%3A0xc79498d0c8a689ab!2sPasta%20Kota!5e0!3m2!1sid!2sid!4v1722503433505!5m2!1sid!2sid" 
+            width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      <!-- </div> -->
+    </div>
+
+    <div class="footer__content">
+      <h3 class="footer__title">Alamat</h3>
+      <ul>
+        <li>Streetfood M.Toha Cirebon</li>
+        <li>0851 - 4758 - 6462</li>
+        <li>pennkota@email.com</li>
+      </ul>
+    </div>
+
+    <div class="footer__content">
+      <h3 class="footer__title">Layanan</h3>
+      <ul>
+        <li><a class="footer__link">Hygiene Food</a></li>
+        <li><a class="footer__link">Friendly Service</a></li>
+        <li><a class="footer__link">Online Order</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__content">
+      <h3 class="footer__title">Informasi</h3>
+      <ul>
+        <li><a href="#" class="footer__link">Promo</a></li>
+        <li><a href="https://maps.app.goo.gl/FG2mFxV6p2C5amh58" class="footer__link">Lokasi Outlet</a></li>
+        <li><a href="https://wa.me/6285147586462" class="footer__link">Customer Services</a></li>
+      </ul>
+    </div>
+  </div>
+<br><br>
+  <center>
+    <a href="https://wa.me/6285147586462" class="footer__social"><i class="bx bxl-whatsapp"></i></a>
+    <a href="https://www.instagram.com/pastakota?igsh=and1b2VqZGt1Mzl5 " class="footer__social"><i class="bx bxl-instagram"></i></a>
+    <a href="https://www.tiktok.com/@pastakota" class="footer__social">
+      <img src="assets/img/tik-tok.png" alt="TikTok" class="social-icon">
+    </a>
+</center>
+  <p class="footer__copy">&#169; 2024 Pastakota. All right reserved</p>
+</footer>
+
+
+    <!--========== SCROLL REVEAL ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--========== MAIN JS ==========-->
+    <script src="assets/js/main.js"></script>
+
+    <!--========== MAIN JS ==========-->
+    <script>
+      function filterMenu(category) {
+        var items = document.querySelectorAll('.menu__content');
+        items.forEach(function(item) {
+          item.style.display = category === 'all' || item.classList.contains(category) ? 'block' : 'none';
+        });
+    
+        // Update active class
+        var buttons = document.querySelectorAll('.menu__category');
+        buttons.forEach(function(button) {
+          button.classList.remove('active');
+        });
+        document.querySelector('.menu__category[onclick="filterMenu(\'' + category + '\')"]').classList.add('active');
+      }
+    </script>
+  </body>
+</html>
